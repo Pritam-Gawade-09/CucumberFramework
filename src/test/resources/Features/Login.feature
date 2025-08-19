@@ -4,7 +4,7 @@ Feature: login
 Background:
   Given user should be on login page
 
-  @sanity
+  @sanity @Login
 Scenario: valid_login_TC01
 When user enters valid userid
 And user enters valid password
