@@ -1,21 +1,19 @@
 package com.vtiger.Stepdefinitions;
 
-import com.vtiger.pages.HomePage;
-import com.vtiger.pages.LoginPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
-public class loginsteps extends basesteps {
+import java.util.List;
+
+public class LoginSteps extends BaseSteps {
 
 
     @Before
@@ -90,5 +88,19 @@ public class loginsteps extends basesteps {
         getLoginPage().SetUserPassword(pwd);
     }
 
+
+    @When("user enters valid username")
+    public void user_enters_valid_username() {
+        getLoginPage().SetUserName("admin");
+    }
+
+    @When("user select Theme from options")
+    public void user_select_theme_from_options() {
+        getLoginPage().SelectTheme(dt.get(TCName).get("Theme"));
+    }
+    @Then("user should be login successfully")
+    public void user_should_be_login_successfully() {
+
+    }
 
 }

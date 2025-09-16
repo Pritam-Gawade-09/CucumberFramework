@@ -1,28 +1,22 @@
 package com.vtiger.Stepdefinitions;
 
-import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
-import com.vtiger.pages.HomePage;
-import com.vtiger.pages.LeadPage;
-import com.vtiger.pages.LoginPage;
 import com.vtiger.pages.PageObjectManager;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-public class basesteps extends PageObjectManager {
+public class BaseSteps extends PageObjectManager {
 
     public static Properties prop;
     public static Map<String, Map<String,String>> dt;
@@ -55,6 +49,7 @@ public class basesteps extends PageObjectManager {
             driver = new ChromeDriver();
         }
         driver.get(prop.getProperty("url"));
+        driver.manage().window().maximize();
 
     }
 

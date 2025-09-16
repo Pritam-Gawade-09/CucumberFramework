@@ -4,7 +4,7 @@ Feature: login
 Background:
   Given user should be on login page
 
-  @sanity @Login
+  @Login
 Scenario: valid_login_TC01
 When user enters valid userid
 And user enters valid password
@@ -46,4 +46,10 @@ And user can see the error message on login page
     |       |admin      |
   #  |admin  |admin111   |
   #  |admin  |null       |
-
+ @Theme
+  Scenario: Login With Theam_TC05
+    When user enters valid username
+    And user enters valid password
+    And user select Theme from options
+    And user click on login button
+    Then user should be login successfully

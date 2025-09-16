@@ -12,7 +12,7 @@ import org.testng.annotations.Listeners;
         features = "src/test/resources/Features/",
         glue = "com.vtiger.Stepdefinitions",
         dryRun = false,
-        tags = "@Login",
+        tags = "@Potential",
         monochrome = true,
         plugin = {
                 "pretty",

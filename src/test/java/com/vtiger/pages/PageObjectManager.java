@@ -12,6 +12,8 @@ public class PageObjectManager {
     private LoginPage lp;
     private HomePage hp;
     private LeadPage ldp;
+    private AccountPage ac;
+    private PotentialPage potpage;
 
 
 
@@ -26,6 +28,16 @@ public class PageObjectManager {
     }
 
     public LeadPage getLeadPage() {
+
         return (ldp == null) ? ldp = new LeadPage(driver) : ldp;
+    }
+
+    public PotentialPage getPotentialPage(){
+        return (potpage==null) ? potpage =new PotentialPage(driver) : potpage;
+    }
+
+
+    public AccountPage getAccountPage(){
+        return (ac==null) ? ac=new AccountPage(driver):ac;
     }
 }

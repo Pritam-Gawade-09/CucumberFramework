@@ -3,12 +3,11 @@ package com.vtiger.Stepdefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 import java.util.List;
 import java.util.Map;
 
-public class leadsteps extends basesteps {
+public class LeadSteps extends BaseSteps {
 
 
 

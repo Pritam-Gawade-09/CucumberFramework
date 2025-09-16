@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class LoginPage extends CommonActions {
 
@@ -31,14 +34,17 @@ public class LoginPage extends CommonActions {
     @FindBy(xpath="//*[contains(text(),'You must specify a valid username and password')]")
     WebElement msg_Error;
 
+    @FindBy(name = "login_theme")
+    WebElement select_theme;
 
 
 
-    public void login(String uid, String pwd)
+    public void login(String uid, String pwd,String opt)
     {
         SetUserName(uid);
         SetUserPassword(pwd);
         clickLogin();
+        SelectTheme(opt);
     }
 
     public void SetUserName(String uid)
@@ -66,6 +72,11 @@ public class LoginPage extends CommonActions {
     {
 
         ElementExist(msg_Error);
+
+    }
+
+    public void SelectTheme(String opt){
+       SelectOption(select_theme,opt);
 
     }
 

@@ -1,8 +1,10 @@
 package com.vtiger.utils;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -13,7 +15,7 @@ public class CommonActions {
     public CommonActions(WebDriver driver)
     {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     public void setInput(WebElement elm, String val)
@@ -55,4 +57,17 @@ public class CommonActions {
         }
     }
 
-}
+
+
+        public void SelectOption(WebElement elm, String val) {
+            try {
+                wait.until(ExpectedConditions.visibilityOf(elm));  // ✅ WebElement directly वापर
+                Select sc = new Select(elm);
+                sc.selectByVisibleText(val);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+
+    }}
