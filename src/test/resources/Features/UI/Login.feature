@@ -46,7 +46,7 @@ And user can see the error message on login page
     |       |admin      |
   #  |admin  |admin111   |
   #  |admin  |null       |
- @Theme
+
   Scenario: Login With Theam_TC05
     When user enters valid username
     And user enters valid password

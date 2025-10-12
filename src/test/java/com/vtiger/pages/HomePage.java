@@ -1,6 +1,7 @@
 package com.vtiger.pages;
 
 import com.vtiger.utils.CommonActions;
+import groovy.xml.StreamingDOMBuilder;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,6 +33,24 @@ public class HomePage extends CommonActions {
     @FindBy(linkText = "New Potential")
     WebElement lnk_Potential;
 
+    @FindBy(linkText = "New FAQ")
+    WebElement lnk_FAQ;
+
+    @FindBy(linkText = "New Product")
+    WebElement lnk_Product;
+
+    @FindBy(linkText = "New Ticket")
+    WebElement lnk_Ticket;
+
+    @FindBy(linkText = "My Account")
+    WebElement lnk_MyAccount;
+
+    @FindBy(linkText = "New Task")
+    WebElement lnk_Task;
+
+    @FindBy(linkText = "New Note")
+    WebElement lnk_Note;
+
     public void HomeDisplay()
     {
 
@@ -54,6 +73,29 @@ public class HomePage extends CommonActions {
 
     public void clickNewPotential(){
         clickElement(lnk_Potential);
+    }
+
+    public void clickNewFAQ(){
+      clickElement(lnk_FAQ);
+    }
+
+    public void clickNewProduct(){
+      clickElement(lnk_Product);
+    }
+
+    public void clickNewTicket(){
+     clickElement(lnk_Ticket);
+    }
+
+    public void clickMyAccount(){
+       clickElement(lnk_MyAccount);
+
+    }
+    public void clickNewTask(){
+        clickElement(lnk_Task);
+    }
+    public void clickNewNote(){
+        clickElement(lnk_Note);
     }
 
 }

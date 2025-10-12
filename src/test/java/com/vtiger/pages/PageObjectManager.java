@@ -14,6 +14,12 @@ public class PageObjectManager {
     private LeadPage ldp;
     private AccountPage ac;
     private PotentialPage potpage;
+    private FAQPage faq;
+    private ProductPage pp;
+    private TicketPage tp;
+    private CustomizeTabsPage custom;
+    private TaskPage task;
+    private NotePage note;
 
 
 
@@ -40,4 +46,28 @@ public class PageObjectManager {
     public AccountPage getAccountPage(){
         return (ac==null) ? ac=new AccountPage(driver):ac;
     }
-}
+
+    public FAQPage getFAQPage(){
+        return (faq==null) ? faq=new FAQPage(driver):faq;
+    }
+    public ProductPage getProductPage(){
+        return (pp==null) ? pp=new ProductPage(driver):pp;
+    }
+
+    public  TicketPage getTicketPage(){
+        return (tp==null)? tp=new TicketPage(driver):tp;
+    }
+
+    public CustomizeTabsPage getCustomizeTabsPage(){
+        return (custom==null) ? custom=new CustomizeTabsPage(driver):custom;}
+
+    public TaskPage getTaskPage(){
+        return (task==null) ? task=new TaskPage(driver):task;
+    }
+
+    public NotePage getNotePage(){
+        return (note==null) ? note=new NotePage(driver):note;
+
+    }
+    }
+

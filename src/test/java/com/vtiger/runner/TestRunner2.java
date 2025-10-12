@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/Features/Leads.feature",
-        glue = "com.vtiger.Stepdefinitions",
+        glue = "com.vtiger.StepDefinitions",
         dryRun = false,
         tags = "@ldp",
         monochrome = true,

@@ -1,6 +1,5 @@
-package com.vtiger.Stepdefinitions;
+package com.vtiger.StepDefinitions;
 
-import com.vtiger.pages.PageObjectManager;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 

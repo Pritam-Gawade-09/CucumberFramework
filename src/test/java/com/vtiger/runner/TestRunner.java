@@ -9,10 +9,10 @@ import org.testng.annotations.Listeners;
 
 
 @CucumberOptions(
-        features = "src/test/resources/Features/",
-        glue = "com.vtiger.Stepdefinitions",
+        features = "src/test/resources/Features/UI",
+        glue = "com.vtiger.StepDefinitions",
         dryRun = false,
-        tags = "@Potential",
+        tags = "@Note",
         monochrome = true,
         plugin = {
                 "pretty",

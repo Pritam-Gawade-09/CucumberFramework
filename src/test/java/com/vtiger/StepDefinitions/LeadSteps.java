@@ -1,4 +1,4 @@
-package com.vtiger.Stepdefinitions;
+package com.vtiger.StepDefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

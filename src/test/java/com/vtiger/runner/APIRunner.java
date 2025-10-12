@@ -8,10 +8,10 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-        features = "src/test/resources/Features/Login.feature",
-        glue = "com.vtiger.Stepdefinitions",
+        features = "src/test/resources/Features/API",
+        glue = "com.vtiger.StepDefinitions",
         dryRun = false,
-        tags = "@smoke",
+        tags = "@ls",
         monochrome = true,
         plugin = {
                 "pretty",
@@ -24,7 +24,7 @@ import io.cucumber.testng.CucumberOptions;
 
 )
 
-public class TestRunner1 extends AbstractTestNGCucumberTests {
+public class APIRunner extends AbstractTestNGCucumberTests {
 
      /*   @Override
         @DataProvider(parallel = true)

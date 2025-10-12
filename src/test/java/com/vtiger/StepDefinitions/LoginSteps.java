@@ -1,4 +1,4 @@
-package com.vtiger.Stepdefinitions;
+package com.vtiger.StepDefinitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -8,10 +8,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
-import java.util.List;
 
 public class LoginSteps extends BaseSteps {
 
@@ -19,15 +15,20 @@ public class LoginSteps extends BaseSteps {
     @Before
     public void getScenario(Scenario scenario)
     {
+        initation();
         TCName = scenario.getName();
+        report=extent.createTest(TCName);
+
     }
 
     @After
     public void tearDown(Scenario scenario) {
+        extent.flush();
         if (scenario.isFailed()) {
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "Failed Step Screenshot");
         }
+        if(driver!=null)
         driver.quit();
     }
 

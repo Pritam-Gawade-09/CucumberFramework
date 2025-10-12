@@ -1,8 +1,7 @@
-package com.vtiger.Stepdefinitions;
+package com.vtiger.StepDefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
 
 public class PotentialSteps extends BaseSteps {
     @When("user click on New potential link")
